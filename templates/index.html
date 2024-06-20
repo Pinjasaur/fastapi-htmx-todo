@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FastAPI + HTMX</title>
+  <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
+  <link rel="stylesheet" href="/static/style.css">
+  <script src="https://unpkg.com/htmx.org@1.9.12" integrity="sha384-ujb1lZYygJmzgSwoxRggbCHcjc0rB2XoQrxeTUQyRjrOnlCoYta87iKBWq3EsdM2" crossorigin="anonymous"></script>
+</head>
+<body>
+  <header>
+    <h1>FastAPI + HTMX</h1>
+    <p>Let&rsquo;s create some todos.</p>
+  </header>
+  <main>
+    <section>
+      <form hx-post="/todos" hx-target="#todos" hx-swap="innerHTML" hx-on::after-request="this.reset()">
+        <input type="text" name="todo" placeholder="I'd like to...">
+        <button>Create</button>
+      </form>
+    </section>
+    <section>
+      <h2>Todos</h2>
+      <ul id="todos" hx-get="/todos" hx-swap="innerHTML" hx-trigger="load"></ul>
+    </section>
+  </main>
+</body>
+</html>
