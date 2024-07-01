@@ -6,7 +6,7 @@
   <title>FastAPI + HTMX</title>
   <link rel="stylesheet" href="https://cdn.simplecss.org/simple.min.css">
   <link rel="stylesheet" href="/static/style.css">
-  <script src="https://unpkg.com/htmx.org@1.9.12" integrity="sha384-ujb1lZYygJmzgSwoxRggbCHcjc0rB2XoQrxeTUQyRjrOnlCoYta87iKBWq3EsdM2" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/htmx.org@2.0.0" integrity="sha384-wS5l5IKJBvK6sPTKa2WZ1js3d947pvWXbPJ1OmWfEuxLgeHcEbjUUA5i9V5ZkpCw" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
@@ -15,7 +15,7 @@
   </header>
   <main>
     <section>
-      <form hx-post="/todos" hx-target="#todos" hx-swap="innerHTML" hx-on::after-request="this.reset()">
+      <form hx-post="/todos" hx-target="#todos" hx-swap="innerHTML" hx-on:htmx:after-request="this.reset()">
         <input type="text" name="todo" placeholder="I'd like to...">
         <button>Create</button>
       </form>
