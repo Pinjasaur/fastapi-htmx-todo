@@ -1,5 +1,7 @@
 # Using HTMX v2 with FastAPI
 
+> A simple todo web app built using HTMX v2 with FastAPI.
+
 After cloning:
 
 ```sh
