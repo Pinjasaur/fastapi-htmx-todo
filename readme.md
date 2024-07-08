@@ -29,3 +29,7 @@ If you're using Render, you can specify the port to bind to:
 ```sh
 fastapi run main.py --port $PORT
 ```
+
+## License
+
+[MIT](https://pinjasaur.mit-license.org/@2024).
