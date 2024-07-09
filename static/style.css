@@ -11,6 +11,11 @@ section > form {
   > :first-child {
     width: 100%;
   }
+
+  /* Override simple.css on smaller screens */
+  > :last-child {
+    width: unset;
+  }
 }
 
 ul {
