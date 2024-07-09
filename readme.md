@@ -2,6 +2,8 @@
 
 > A simple todo web app built using HTMX v2 with FastAPI.
 
+This is the companion source code to this tutorial on TestDriven.io: <https://testdriven.io/blog/fastapi-htmx/>
+
 A hosted instance is available on Render: <https://fastapi-htmx-todo.onrender.com>
 
 After cloning:
